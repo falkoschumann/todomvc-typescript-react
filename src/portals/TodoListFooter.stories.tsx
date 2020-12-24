@@ -7,6 +7,7 @@ import { TodoFilter } from "../types";
 export default {
   title: "Todo List Footer",
   component: TodoListFooter,
+  decorators: [(story) => <section className="todoapp">{story()}</section>],
   argTypes: {
     filter: {
       control: {

@@ -6,7 +6,7 @@ import TodoListHeader, { TodoListHeaderProps } from "./TodoListHeader";
 export default {
   title: "Todo List Header",
   component: TodoListHeader,
-  decorators: [(story) => <div className="todoapp">{story()}</div>],
+  decorators: [(story) => <section className="todoapp">{story()}</section>],
 } as Meta;
 
 const Template: Story<TodoListHeaderProps> = (args) => <TodoListHeader {...args} />;

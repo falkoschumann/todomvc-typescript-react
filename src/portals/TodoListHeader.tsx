@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
 export type TodoListHeaderProps = Readonly<{
   onNewTodo?: (text: string) => void;
@@ -8,7 +8,7 @@ function TodoListHeader({ onNewTodo }: TodoListHeaderProps) {
   const newTodoRef = useRef<HTMLInputElement>(null);
 
   function handleNewTodo(event: React.KeyboardEvent) {
-    if (event.key !== "Enter") {
+    if (event.key !== 'Enter') {
       return;
     }
 
@@ -17,7 +17,7 @@ function TodoListHeader({ onNewTodo }: TodoListHeaderProps) {
     if (newTodoRef.current) {
       const text = newTodoRef.current.value.trim();
       onNewTodo?.(text);
-      newTodoRef.current.value = "";
+      newTodoRef.current.value = '';
     }
   }
 

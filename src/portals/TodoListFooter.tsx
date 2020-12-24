@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { TodoFilter } from "../types";
+import { TodoFilter } from '../types';
 
 export type TodoListFooterProps = Readonly<{
   activeCount?: number;
@@ -22,21 +22,21 @@ function TodoListFooter({
   return (
     <footer className="footer">
       <span className="todo-count">
-        <strong>{activeCount}</strong> item{activeCount !== 1 ? "s" : null} left
+        <strong>{activeCount}</strong> item{activeCount !== 1 ? 's' : null} left
       </span>
       <ul className="filters">
         <li>
-          <a className={filter === TodoFilter.All ? "selected" : undefined} href="#/">
+          <a className={filter === TodoFilter.All ? 'selected' : undefined} href="#/">
             All
           </a>
         </li>
         <li>
-          <a className={filter === TodoFilter.Active ? "selected" : undefined} href="#/active">
+          <a className={filter === TodoFilter.Active ? 'selected' : undefined} href="#/active">
             Active
           </a>
         </li>
         <li>
-          <a className={filter === TodoFilter.Completed ? "selected" : undefined} href="#/completed">
+          <a className={filter === TodoFilter.Completed ? 'selected' : undefined} href="#/completed">
             Completed
           </a>
         </li>

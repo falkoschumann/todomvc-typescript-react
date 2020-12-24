@@ -1,10 +1,10 @@
-import React from "react";
-import { Meta } from "@storybook/react";
+import React from 'react';
+import { Meta } from '@storybook/react';
 
-import InfoFooter from "./InfoFooter";
+import InfoFooter from './InfoFooter';
 
 export default {
-  title: "Info Footer",
+  title: 'Info Footer',
   component: InfoFooter,
 } as Meta;
 

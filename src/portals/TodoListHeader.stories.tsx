@@ -1,10 +1,10 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import TodoListHeader, { TodoListHeaderProps } from "./TodoListHeader";
+import TodoListHeader, { TodoListHeaderProps } from './TodoListHeader';
 
 export default {
-  title: "Todo List Header",
+  title: 'Todo List Header',
   component: TodoListHeader,
   decorators: [(story) => <section className="todoapp">{story()}</section>],
 } as Meta;

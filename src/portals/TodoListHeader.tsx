@@ -7,7 +7,7 @@ export type TodoListHeaderProps = Readonly<{
 function TodoListHeader({ onNewTodo }: TodoListHeaderProps) {
   const newTodoRef = useRef<HTMLInputElement>(null);
 
-  function handleNewTodo(event: React.KeyboardEvent) {
+  function handleNewTodo(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key !== 'Enter') {
       return;
     }

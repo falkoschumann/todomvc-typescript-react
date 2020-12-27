@@ -23,9 +23,9 @@ const Template: Story<TodoListFooterProps> = (args) => <TodoListFooter {...args}
 export const Default = Template.bind({});
 Default.storyName = 'Hidden by Default';
 Default.args = {
-  activeCount: undefined,
-  completedCount: undefined,
-  filter: undefined,
+  activeCount: 0,
+  completedCount: 0,
+  filter: TodoFilter.All,
 };
 
 export const ZeroItemLeft = Template.bind({});

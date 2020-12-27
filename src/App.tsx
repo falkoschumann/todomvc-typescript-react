@@ -1,20 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import TodoController from './portals/TodoController';
 import './App.css';
+import InfoFooter from './portals/InfoFooter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className="todoapp">
+        <TodoController
+          todos={[
+            { id: '1', title: 'Taste JavaScript', completed: true },
+            { id: '2', title: 'Buy a unicorn', completed: false },
+          ]}
+        />
+      </section>
+      <InfoFooter />
+    </>
   );
 }
 

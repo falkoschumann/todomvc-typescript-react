@@ -16,7 +16,7 @@ const Template: Story<TodoListProps> = (args) => <TodoList {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: [
-    <TodoItem todo={{ id: '1', title: 'Taste JavaScript', completed: true }} />,
-    <TodoItem todo={{ id: '2', title: 'Buy a unicorn', completed: false }} />,
+    <TodoItem key="1" todo={{ id: '1', title: 'Taste JavaScript', completed: true }} />,
+    <TodoItem key="2" todo={{ id: '2', title: 'Buy a unicorn', completed: false }} />,
   ],
 };

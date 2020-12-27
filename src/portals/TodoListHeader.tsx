@@ -8,17 +8,14 @@ function TodoListHeader({ onNewTodo }: TodoListHeaderProps) {
   const newTodoRef = useRef<HTMLInputElement>(null);
 
   function handleNewTodo(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key !== 'Enter') {
+    if (newTodoRef.current == null || event.key !== 'Enter') {
       return;
     }
 
     event.preventDefault();
-
-    if (newTodoRef.current) {
-      const text = newTodoRef.current.value.trim();
-      onNewTodo?.(text);
-      newTodoRef.current.value = '';
-    }
+    const text = newTodoRef.current.value.trim();
+    onNewTodo?.(text);
+    newTodoRef.current.value = '';
   }
 
   return (

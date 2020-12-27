@@ -60,6 +60,7 @@ function TodoController({
     )
     .map((it) => (
       <TodoItem
+        key={it.id}
         todo={it}
         editing={editing === it.id}
         onToggle={() => handleToggle(it)}

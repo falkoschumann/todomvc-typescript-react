@@ -1,8 +1,8 @@
 import React from 'react';
-import { render, fireEvent, screen, waitFor } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { Todo } from './types';
+import { Todo } from '../domain/data';
 import TodoItem from './TodoItem';
 
 const todo: Todo = { id: '1', title: 'Taste JavaScript', completed: false };

@@ -487,8 +487,11 @@ exports[`Storyshots Todo Controller Active Filter 1`] = `
     className="main"
   >
     <input
+      checked={false}
       className="toggle-all"
       id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
       type="checkbox"
     />
     <label
@@ -573,6 +576,7 @@ exports[`Storyshots Todo Controller Active Filter 1`] = `
     </ul>
     <button
       className="clear-completed"
+      onClick={[Function]}
     >
       Clear completed
     </button>
@@ -601,8 +605,11 @@ exports[`Storyshots Todo Controller Completed Filter 1`] = `
     className="main"
   >
     <input
+      checked={false}
       className="toggle-all"
       id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
       type="checkbox"
     />
     <label
@@ -687,6 +694,7 @@ exports[`Storyshots Todo Controller Completed Filter 1`] = `
     </ul>
     <button
       className="clear-completed"
+      onClick={[Function]}
     >
       Clear completed
     </button>
@@ -715,8 +723,11 @@ exports[`Storyshots Todo Controller Default 1`] = `
     className="main"
   >
     <input
+      checked={false}
       className="toggle-all"
       id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
       type="checkbox"
     />
     <label
@@ -833,6 +844,7 @@ exports[`Storyshots Todo Controller Default 1`] = `
     </ul>
     <button
       className="clear-completed"
+      onClick={[Function]}
     >
       Clear completed
     </button>
@@ -975,6 +987,94 @@ exports[`Storyshots Todo Item Editing 1`] = `
 </section>
 `;
 
+exports[`Storyshots Todo List All Completed 1`] = `
+<section
+  className="todoapp"
+>
+  <section
+    className="main"
+  >
+    <input
+      checked={true}
+      className="toggle-all"
+      id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
+      type="checkbox"
+    />
+    <label
+      htmlFor="toggle-all"
+    >
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list"
+    >
+      <li
+        className="completed"
+      >
+        <div
+          className="view"
+        >
+          <input
+            checked={true}
+            className="toggle"
+            title="Toggle"
+            type="checkbox"
+          />
+          <label
+            onDoubleClick={[Function]}
+          >
+            Taste JavaScript
+          </label>
+          <button
+            className="destroy"
+            title="Destroy"
+          />
+        </div>
+        <input
+          className="edit"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value="Taste JavaScript"
+        />
+      </li>
+      <li
+        className=""
+      >
+        <div
+          className="view"
+        >
+          <input
+            checked={false}
+            className="toggle"
+            title="Toggle"
+            type="checkbox"
+          />
+          <label
+            onDoubleClick={[Function]}
+          >
+            Buy a unicorn
+          </label>
+          <button
+            className="destroy"
+            title="Destroy"
+          />
+        </div>
+        <input
+          className="edit"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value="Buy a unicorn"
+        />
+      </li>
+    </ul>
+  </section>
+</section>
+`;
+
 exports[`Storyshots Todo List Default 1`] = `
 <section
   className="todoapp"
@@ -983,8 +1083,11 @@ exports[`Storyshots Todo List Default 1`] = `
     className="main"
   >
     <input
+      checked={false}
       className="toggle-all"
       id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
       type="checkbox"
     />
     <label

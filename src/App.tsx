@@ -6,10 +6,12 @@ import './App.css';
 import InfoFooter from './portals/InfoFooter';
 import { TodoFilter } from './portals/types';
 
-const todos = [
-  { id: '1', title: 'Taste JavaScript', completed: true },
-  { id: '2', title: 'Buy a unicorn', completed: false },
-];
+const todosQueryResult = {
+  todos: [
+    { id: '1', title: 'Taste JavaScript', completed: true },
+    { id: '2', title: 'Buy a unicorn', completed: false },
+  ],
+};
 
 function App() {
   return (
@@ -17,13 +19,13 @@ function App() {
       <section className="todoapp">
         <Switch>
           <Route exact path="/">
-            <TodoController todos={todos} />
+            <TodoController todosQueryResult={todosQueryResult} />
           </Route>
           <Route exact path="/active">
-            <TodoController todos={todos} filter={TodoFilter.Active} />
+            <TodoController todosQueryResult={todosQueryResult} filter={TodoFilter.Active} />
           </Route>
           <Route exact path="/completed">
-            <TodoController todos={todos} filter={TodoFilter.Completed} />
+            <TodoController todosQueryResult={todosQueryResult} filter={TodoFilter.Completed} />
           </Route>
         </Switch>
       </section>

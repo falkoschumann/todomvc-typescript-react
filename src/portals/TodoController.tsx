@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 
+import {
+  ClearCompletedCommand,
+  DestroyCommand,
+  EditCommand,
+  NewTodoCommand,
+  ToggleAllCommand,
+  ToggleCommand,
+} from '../domain/messages/commands';
+import { TodosQueryResult } from '../domain/messages/queries';
 import { Todo, TodoId } from '../domain/data';
 import { TodoFilter } from './types';
 import TodoListHeader from './TodoListHeader';
@@ -8,31 +17,42 @@ import TodoItem from './TodoItem';
 import TodoListFooter from './TodoListFooter';
 
 export type TodoControllerProps = Readonly<{
-  todos?: readonly Todo[];
   filter?: TodoFilter;
-  onNewTodo?: (text: string) => void;
-  onToggle?: (id: TodoId) => void;
-  onSave?: (id: TodoId, title: string) => void;
-  onDestroy?: (id: TodoId) => void;
-  onClearCompleted?: () => void;
+  todosQueryResult?: TodosQueryResult;
+  onToggleAllCommand?: (command: ToggleAllCommand) => void;
+  onNewTodoCommand?: (command: NewTodoCommand) => void;
+  onToggleCommand?: (command: ToggleCommand) => void;
+  onEditCommand?: (command: EditCommand) => void;
+  onDestroyCommand?: (command: DestroyCommand) => void;
+  onClearCompletedCommand?: (command: ClearCompletedCommand) => void;
 }>;
 
 function TodoController({
-  todos = [],
   filter = TodoFilter.All,
-  onNewTodo,
-  onToggle,
-  onSave,
-  onDestroy,
-  onClearCompleted,
+  todosQueryResult = { todos: [] },
+  onToggleAllCommand,
+  onNewTodoCommand,
+  onToggleCommand,
+  onEditCommand,
+  onDestroyCommand,
+  onClearCompletedCommand,
 }: TodoControllerProps) {
   const [editing, setEditing] = useState<TodoId>();
 
+  const todos = todosQueryResult.todos;
   const activeCount = todos.filter((it) => !it.completed).length;
   const completedCount = todos.filter((it) => it.completed).length;
 
+  function handleToggleAll(completed: boolean) {
+    onToggleAllCommand?.({ type: 'TOGGLE_ALL_COMMAND', completed });
+  }
+
+  function handleNewTodo(title: string) {
+    onNewTodoCommand?.({ type: 'NEW_TODO_COMMAND', title });
+  }
+
   function handleToggle(todo: Todo) {
-    onToggle?.(todo.id);
+    onToggleCommand?.({ type: 'TOGGLE_COMMAND', id: todo.id });
   }
 
   function handleEdit(todo: Todo) {
@@ -40,8 +60,8 @@ function TodoController({
   }
 
   function handleSave(todo: Todo, title: string) {
-    onSave?.(todo.id, title);
     setEditing(undefined);
+    onEditCommand?.({ type: 'EDIT_COMMAND', id: todo.id, title });
   }
 
   function handleCancel() {
@@ -49,7 +69,11 @@ function TodoController({
   }
 
   function handleDestroy(todo: Todo) {
-    onDestroy?.(todo.id);
+    onDestroyCommand?.({ type: 'DESTROY_COMMAND', id: todo.id });
+  }
+
+  function handleClearCompleted() {
+    onClearCompletedCommand?.({ type: 'CLEAR_COMPLETED_COMMAND' });
   }
 
   const todoItems = todos
@@ -74,15 +98,17 @@ function TodoController({
 
   return (
     <>
-      <TodoListHeader onNewTodo={onNewTodo} />
+      <TodoListHeader onNewTodo={handleNewTodo} />
       {todoItems.length === 0 ? null : (
         <>
-          <TodoList>{todoItems}</TodoList>
+          <TodoList allCompleted={activeCount === 0} onToggleAll={handleToggleAll}>
+            {todoItems}
+          </TodoList>
           <TodoListFooter
             activeCount={activeCount}
             completedCount={completedCount}
             filter={filter}
-            onClearCompleted={onClearCompleted}
+            onClearCompleted={handleClearCompleted}
           />
         </>
       )}

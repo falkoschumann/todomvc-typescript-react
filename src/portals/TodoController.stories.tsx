@@ -14,10 +14,12 @@ const Template: Story<TodoControllerProps> = (args) => <TodoController {...args}
 
 export const Default = Template.bind({});
 Default.args = {
-  todos: [
-    { id: '1', title: 'Taste JavaScript', completed: true },
-    { id: '2', title: 'Buy a unicorn', completed: false },
-  ],
+  todosQueryResult: {
+    todos: [
+      { id: '1', title: 'Taste JavaScript', completed: true },
+      { id: '2', title: 'Buy a unicorn', completed: false },
+    ],
+  },
   filter: TodoFilter.All,
 };
 

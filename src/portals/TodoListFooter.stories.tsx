@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import TodoListFooter, { TodoListFooterProps } from './TodoListFooter';
-import { TodoFilter } from '../types';
+import { TodoFilter } from './types';
 
 export default {
   title: 'Todo List Footer',

@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import TodoController, { TodoControllerProps } from './TodoController';
-import { TodoFilter } from '../types';
+import { TodoFilter } from './types';
 
 export default {
   title: 'Todo Controller',

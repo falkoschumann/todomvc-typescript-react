@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import TodoController from './portals/TodoController';
 import './App.css';
 import InfoFooter from './portals/InfoFooter';
-import { TodoFilter } from './types';
+import { TodoFilter } from './portals/types';
 
 const todos = [
   { id: '1', title: 'Taste JavaScript', completed: true },

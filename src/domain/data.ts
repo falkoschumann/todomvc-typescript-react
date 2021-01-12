@@ -5,9 +5,3 @@ export type Todo = Readonly<{
   title: string;
   completed: boolean;
 }>;
-
-export enum TodoFilter {
-  All = 'ALL',
-  Active = 'ACTIVE',
-  Completed = 'COMPLETED',
-}

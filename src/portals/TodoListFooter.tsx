@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TodoFilter } from '../types';
+import { TodoFilter } from './types';
 
 export type TodoListFooterProps = Readonly<{
   activeCount?: number;

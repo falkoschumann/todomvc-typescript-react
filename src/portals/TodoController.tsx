@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { Todo, TodoId, TodoFilter } from '../types';
+import { Todo, TodoId } from '../domain/data';
+import { TodoFilter } from './types';
 import TodoListHeader from './TodoListHeader';
 import TodoList from './TodoList';
 import TodoItem from './TodoItem';

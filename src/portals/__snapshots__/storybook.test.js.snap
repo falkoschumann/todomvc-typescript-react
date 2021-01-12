@@ -463,14 +463,6 @@ exports[`Storyshots Info Footer Default 1`] = `
       Falko Schumann
     </a>
   </p>
-  <p>
-    Part of 
-    <a
-      href="http://todomvc.com"
-    >
-      TodoMVC
-    </a>
-  </p>
 </footer>
 `;
 

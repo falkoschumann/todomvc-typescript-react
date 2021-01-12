@@ -6,7 +6,7 @@ import InfoFooter from './portals/InfoFooter';
 
 function App() {
   return (
-    <>
+    <React.StrictMode>
       <section className="todoapp">
         <TodoController
           todos={[
@@ -16,7 +16,7 @@ function App() {
         />
       </section>
       <InfoFooter />
-    </>
+    </React.StrictMode>
   );
 }
 

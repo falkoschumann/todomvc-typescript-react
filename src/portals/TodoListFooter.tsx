@@ -6,7 +6,7 @@ export type TodoListFooterProps = Readonly<{
   activeCount?: number;
   completedCount?: number;
   filter?: TodoFilter;
-  onClearCompleted?: () => void;
+  onClearCompleted?: () => void; // TODO Test clear completed
 }>;
 
 function TodoListFooter({

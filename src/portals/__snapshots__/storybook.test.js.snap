@@ -550,7 +550,7 @@ exports[`Storyshots Todo Controller Active Filter 1`] = `
     >
       <li>
         <a
-          href="#/"
+          href="/"
         >
           All
         </a>
@@ -558,14 +558,14 @@ exports[`Storyshots Todo Controller Active Filter 1`] = `
       <li>
         <a
           className="selected"
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -664,14 +664,14 @@ exports[`Storyshots Todo Controller Completed Filter 1`] = `
     >
       <li>
         <a
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
@@ -679,7 +679,7 @@ exports[`Storyshots Todo Controller Completed Filter 1`] = `
       <li>
         <a
           className="selected"
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -811,21 +811,21 @@ exports[`Storyshots Todo Controller Default 1`] = `
       <li>
         <a
           className="selected"
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -1083,21 +1083,21 @@ exports[`Storyshots Todo List Footer 0 Items left 1`] = `
       <li>
         <a
           className="selected"
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -1134,21 +1134,21 @@ exports[`Storyshots Todo List Footer 1 Item left 1`] = `
       <li>
         <a
           className="selected"
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -1181,21 +1181,21 @@ exports[`Storyshots Todo List Footer Has completed Items 1`] = `
       <li>
         <a
           className="selected"
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -1239,21 +1239,21 @@ exports[`Storyshots Todo List Footer Multiple Items left 1`] = `
       <li>
         <a
           className="selected"
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -1284,7 +1284,7 @@ exports[`Storyshots Todo List Footer Show active Items 1`] = `
     >
       <li>
         <a
-          href="#/"
+          href="/"
         >
           All
         </a>
@@ -1292,14 +1292,14 @@ exports[`Storyshots Todo List Footer Show active Items 1`] = `
       <li>
         <a
           className="selected"
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
       </li>
       <li>
         <a
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>
@@ -1330,14 +1330,14 @@ exports[`Storyshots Todo List Footer Show completed Items 1`] = `
     >
       <li>
         <a
-          href="#/"
+          href="/"
         >
           All
         </a>
       </li>
       <li>
         <a
-          href="#/active"
+          href="/active"
         >
           Active
         </a>
@@ -1345,7 +1345,7 @@ exports[`Storyshots Todo List Footer Show completed Items 1`] = `
       <li>
         <a
           className="selected"
-          href="#/completed"
+          href="/completed"
         >
           Completed
         </a>

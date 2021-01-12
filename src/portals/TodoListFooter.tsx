@@ -26,17 +26,17 @@ function TodoListFooter({
       </span>
       <ul className="filters">
         <li>
-          <a className={filter === TodoFilter.All ? 'selected' : undefined} href="#/">
+          <a className={filter === TodoFilter.All ? 'selected' : undefined} href="/">
             All
           </a>
         </li>
         <li>
-          <a className={filter === TodoFilter.Active ? 'selected' : undefined} href="#/active">
+          <a className={filter === TodoFilter.Active ? 'selected' : undefined} href="/active">
             Active
           </a>
         </li>
         <li>
-          <a className={filter === TodoFilter.Completed ? 'selected' : undefined} href="#/completed">
+          <a className={filter === TodoFilter.Completed ? 'selected' : undefined} href="/completed">
             Completed
           </a>
         </li>

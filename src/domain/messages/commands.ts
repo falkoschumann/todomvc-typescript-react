@@ -1,4 +1,4 @@
-import { TodoId } from "../data";
+import { TodoId } from '../data';
 
 export type ClearCompletedCommand = Readonly<{
   type: 'CLEAR_COMPLETED_COMMAND';

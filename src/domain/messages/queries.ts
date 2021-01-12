@@ -1,4 +1,4 @@
-import { Todo } from "../data";
+import { Todo } from '../data';
 
 export type TodosQuery = Readonly<{
   type: 'TODOS_QUERY';

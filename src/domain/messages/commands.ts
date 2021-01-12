@@ -1,5 +1,10 @@
 import { TodoId } from '../data';
 
+export type CommandStatus = {
+  success: boolean;
+  errorMessage?: string; // required if success=false
+};
+
 export type ClearCompletedCommand = Readonly<{
   type: 'CLEAR_COMPLETED_COMMAND';
 }>;

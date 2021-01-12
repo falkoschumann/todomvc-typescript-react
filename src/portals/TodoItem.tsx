@@ -7,11 +7,11 @@ import { usePrevious } from './hooks';
 export type TodoItemProps = Readonly<{
   todo: Todo;
   editing?: boolean;
-  onToggle?: () => void; // TODO Test toggle
-  onEdit?: () => void; // TODO Test edit
-  onSave?: (title: string) => void; // TODO Test save
-  onCancel?: () => void; // TODO Test cancel
-  onDestroy?: () => void; // TODO Test destroy
+  onToggle?: () => void;
+  onEdit?: () => void;
+  onSave?: (title: string) => void;
+  onCancel?: () => void;
+  onDestroy?: () => void;
 }>;
 
 function TodoItem({ todo, editing = false, onToggle, onEdit, onSave, onCancel, onDestroy }: TodoItemProps) {
@@ -62,9 +62,9 @@ function TodoItem({ todo, editing = false, onToggle, onEdit, onSave, onCancel, o
   return (
     <li className={classnames({ completed: todo.completed, editing })}>
       <div className="view">
-        <input className="toggle" type="checkbox" checked={todo.completed} onChange={onToggle} />
+        <input title="Toggle" className="toggle" type="checkbox" checked={todo.completed} onChange={onToggle} />
         <label onDoubleClick={handleEdit}>{todo.title}</label>
-        <button className="destroy" onClick={onDestroy}></button>
+        <button title="Destroy" className="destroy" onClick={onDestroy}></button>
       </div>
       <input
         ref={inputRef}

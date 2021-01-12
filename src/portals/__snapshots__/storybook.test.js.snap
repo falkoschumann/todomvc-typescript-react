@@ -509,6 +509,7 @@ exports[`Storyshots Todo Controller Active Filter 1`] = `
             checked={false}
             className="toggle"
             onChange={[Function]}
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -519,6 +520,7 @@ exports[`Storyshots Todo Controller Active Filter 1`] = `
           <button
             className="destroy"
             onClick={[Function]}
+            title="Destroy"
           />
         </div>
         <input
@@ -621,6 +623,7 @@ exports[`Storyshots Todo Controller Completed Filter 1`] = `
             checked={true}
             className="toggle"
             onChange={[Function]}
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -631,6 +634,7 @@ exports[`Storyshots Todo Controller Completed Filter 1`] = `
           <button
             className="destroy"
             onClick={[Function]}
+            title="Destroy"
           />
         </div>
         <input
@@ -733,6 +737,7 @@ exports[`Storyshots Todo Controller Default 1`] = `
             checked={true}
             className="toggle"
             onChange={[Function]}
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -743,6 +748,7 @@ exports[`Storyshots Todo Controller Default 1`] = `
           <button
             className="destroy"
             onClick={[Function]}
+            title="Destroy"
           />
         </div>
         <input
@@ -763,6 +769,7 @@ exports[`Storyshots Todo Controller Default 1`] = `
             checked={false}
             className="toggle"
             onChange={[Function]}
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -773,6 +780,7 @@ exports[`Storyshots Todo Controller Default 1`] = `
           <button
             className="destroy"
             onClick={[Function]}
+            title="Destroy"
           />
         </div>
         <input
@@ -851,6 +859,7 @@ exports[`Storyshots Todo Item Completed 1`] = `
           <input
             checked={true}
             className="toggle"
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -860,6 +869,7 @@ exports[`Storyshots Todo Item Completed 1`] = `
           </label>
           <button
             className="destroy"
+            title="Destroy"
           />
         </div>
         <input
@@ -894,6 +904,7 @@ exports[`Storyshots Todo Item Default 1`] = `
           <input
             checked={false}
             className="toggle"
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -903,6 +914,7 @@ exports[`Storyshots Todo Item Default 1`] = `
           </label>
           <button
             className="destroy"
+            title="Destroy"
           />
         </div>
         <input
@@ -937,6 +949,7 @@ exports[`Storyshots Todo Item Editing 1`] = `
           <input
             checked={false}
             className="toggle"
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -946,6 +959,7 @@ exports[`Storyshots Todo Item Editing 1`] = `
           </label>
           <button
             className="destroy"
+            title="Destroy"
           />
         </div>
         <input
@@ -990,6 +1004,7 @@ exports[`Storyshots Todo List Default 1`] = `
           <input
             checked={true}
             className="toggle"
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -999,6 +1014,7 @@ exports[`Storyshots Todo List Default 1`] = `
           </label>
           <button
             className="destroy"
+            title="Destroy"
           />
         </div>
         <input
@@ -1018,6 +1034,7 @@ exports[`Storyshots Todo List Default 1`] = `
           <input
             checked={false}
             className="toggle"
+            title="Toggle"
             type="checkbox"
           />
           <label
@@ -1027,6 +1044,7 @@ exports[`Storyshots Todo List Default 1`] = `
           </label>
           <button
             className="destroy"
+            title="Destroy"
           />
         </div>
         <input

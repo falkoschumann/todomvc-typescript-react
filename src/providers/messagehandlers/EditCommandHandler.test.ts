@@ -11,7 +11,6 @@ it('Edit', () => {
   const handler = new EditCommandHandler(repository);
 
   const status: CommandStatus = handler.handle({
-    type: 'EDIT_COMMAND',
     id: 'd2f7760d-8f03-4cb3-9176-06311cb89993',
     title: 'Foobar',
   });

@@ -1,14 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import TodosController from './TodosController';
-import { TodoFilter } from './types';
 
-const todosQueryResult = {
-  todos: [
-    { id: '1', title: 'Taste JavaScript', completed: true },
-    { id: '2', title: 'Buy a unicorn', completed: false },
-  ],
-};
+import { TodoFilter } from './types';
+import TodosController from './TodosController';
+import { useTodos } from './TodosProvider';
 
 export type TodosPageProps = Readonly<{
   filter?: TodoFilter;
@@ -29,7 +24,20 @@ function TodosPage({ filter }: TodosPageProps) {
       break;
   }
 
-  return <TodosController filter={filter} todosQueryResult={todosQueryResult} />;
+  const todos = useTodos();
+
+  return (
+    <TodosController
+      filter={filter}
+      todosQueryResult={todos.todosQueryResult}
+      onToggleAllCommand={(command) => todos.handleToggleAllCommand(command)}
+      onNewTodoCommand={(command) => todos.handleNewTodoCommand(command)}
+      onToggleCommand={(command) => todos.handleToggleCommand(command)}
+      onEditCommand={(command) => todos.handleEditCommand(command)}
+      onDestroyCommand={(command) => todos.handleDestroyCommand(command)}
+      onClearCompletedCommand={(command) => todos.handleClearCompletedCommand(command)}
+    />
+  );
 }
 
 export default TodosPage;

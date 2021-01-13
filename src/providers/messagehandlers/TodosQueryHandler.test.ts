@@ -10,7 +10,7 @@ it('Todos', () => {
   ]);
   const handler = new TodosQueryHandler(repository);
 
-  const result: TodosQueryResult = handler.handle({ type: 'TODOS_QUERY' });
+  const result: TodosQueryResult = handler.handle({});
 
   expect(result).toEqual({
     todos: [

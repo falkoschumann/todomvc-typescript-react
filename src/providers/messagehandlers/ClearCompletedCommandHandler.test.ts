@@ -10,7 +10,7 @@ it('Clear completed', () => {
   ]);
   const handler = new ClearCompletedCommandHandler(repository);
 
-  const status: CommandStatus = handler.handle({ type: 'CLEAR_COMPLETED_COMMAND' });
+  const status: CommandStatus = handler.handle({});
 
   expect(status).toEqual({ success: true });
   expect(repository.load()).toEqual([

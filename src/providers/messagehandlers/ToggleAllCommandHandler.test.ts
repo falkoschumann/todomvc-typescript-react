@@ -10,7 +10,7 @@ it('Toggle all', () => {
   ]);
   const handler = new ToggleAllCommandHandler(repository);
 
-  const status: CommandStatus = handler.handle({ type: 'TOGGLE_ALL_COMMAND', completed: true });
+  const status: CommandStatus = handler.handle({ completed: true });
 
   expect(status).toEqual({ success: true });
   expect(repository.load()).toEqual([

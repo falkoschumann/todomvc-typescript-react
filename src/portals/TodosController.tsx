@@ -44,15 +44,15 @@ function TodosController({
   const completedCount = todos.filter((it) => it.completed).length;
 
   function handleToggleAll(completed: boolean) {
-    onToggleAllCommand?.({ type: 'TOGGLE_ALL_COMMAND', completed });
+    onToggleAllCommand?.({ completed });
   }
 
   function handleNewTodo(title: string) {
-    onNewTodoCommand?.({ type: 'NEW_TODO_COMMAND', title });
+    onNewTodoCommand?.({ title });
   }
 
   function handleToggle(todo: Todo) {
-    onToggleCommand?.({ type: 'TOGGLE_COMMAND', id: todo.id });
+    onToggleCommand?.({ id: todo.id });
   }
 
   function handleEdit(todo: Todo) {
@@ -61,7 +61,7 @@ function TodosController({
 
   function handleSave(todo: Todo, title: string) {
     setEditing(undefined);
-    onEditCommand?.({ type: 'EDIT_COMMAND', id: todo.id, title });
+    onEditCommand?.({ id: todo.id, title });
   }
 
   function handleCancel() {
@@ -69,11 +69,11 @@ function TodosController({
   }
 
   function handleDestroy(todo: Todo) {
-    onDestroyCommand?.({ type: 'DESTROY_COMMAND', id: todo.id });
+    onDestroyCommand?.({ id: todo.id });
   }
 
   function handleClearCompleted() {
-    onClearCompletedCommand?.({ type: 'CLEAR_COMPLETED_COMMAND' });
+    onClearCompletedCommand?.({});
   }
 
   const todoItems = todos
@@ -100,17 +100,17 @@ function TodosController({
     <>
       <TodoListHeader onNewTodo={handleNewTodo} />
       {todoItems.length === 0 ? null : (
-        <>
-          <TodoList allCompleted={activeCount === 0} onToggleAll={handleToggleAll}>
-            {todoItems}
-          </TodoList>
-          <TodoListFooter
-            activeCount={activeCount}
-            completedCount={completedCount}
-            filter={filter}
-            onClearCompleted={handleClearCompleted}
-          />
-        </>
+        <TodoList allCompleted={activeCount === 0} onToggleAll={handleToggleAll}>
+          {todoItems}
+        </TodoList>
+      )}
+      {todos.length === 0 ? null : (
+        <TodoListFooter
+          activeCount={activeCount}
+          completedCount={completedCount}
+          filter={filter}
+          onClearCompleted={handleClearCompleted}
+        />
       )}
     </>
   );

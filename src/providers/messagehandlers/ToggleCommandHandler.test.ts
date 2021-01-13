@@ -10,7 +10,7 @@ it('Toggle', () => {
   ]);
   const handler = new ToggleCommandHandler(repository);
 
-  const status: CommandStatus = handler.handle({ type: 'TOGGLE_COMMAND', id: 'd2f7760d-8f03-4cb3-9176-06311cb89993' });
+  const status: CommandStatus = handler.handle({ id: 'd2f7760d-8f03-4cb3-9176-06311cb89993' });
 
   expect(status).toEqual({ success: true });
   expect(repository.load()).toEqual([

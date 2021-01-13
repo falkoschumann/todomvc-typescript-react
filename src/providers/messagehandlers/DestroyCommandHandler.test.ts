@@ -10,7 +10,7 @@ it('Destroy', () => {
   ]);
   const handler = new DestroyCommandHandler(repository);
 
-  const status: CommandStatus = handler.handle({ type: 'DESTROY_COMMAND', id: '119e6785-8ffc-42e0-8df6-dbc64881f2b7' });
+  const status: CommandStatus = handler.handle({ id: '119e6785-8ffc-42e0-8df6-dbc64881f2b7' });
 
   expect(status).toEqual({ success: true });
   expect(repository.load()).toEqual([

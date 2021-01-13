@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { TodoFilter } from './types';
 
@@ -26,19 +27,19 @@ function TodoListFooter({
       </span>
       <ul className="filters">
         <li>
-          <a className={filter === TodoFilter.All ? 'selected' : undefined} href="/">
+          <Link className={filter === TodoFilter.All ? 'selected' : undefined} to="/">
             All
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={filter === TodoFilter.Active ? 'selected' : undefined} href="/active">
+          <Link className={filter === TodoFilter.Active ? 'selected' : undefined} to="/active">
             Active
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={filter === TodoFilter.Completed ? 'selected' : undefined} href="/completed">
+          <Link className={filter === TodoFilter.Completed ? 'selected' : undefined} to="/completed">
             Completed
-          </a>
+          </Link>
         </li>
       </ul>
       {completedCount <= 0 ? null : (

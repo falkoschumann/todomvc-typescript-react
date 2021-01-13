@@ -1,16 +1,26 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
 import { Meta, Story } from '@storybook/react';
 
-import TodoController, { TodoControllerProps } from './TodoController';
+import TodosController, { TodosControllerProps } from './TodosController';
 import { TodoFilter } from './types';
 
+const history = createMemoryHistory();
+
 export default {
-  title: 'Todo Controller',
-  component: TodoController,
-  decorators: [(story) => <section className="todoapp">{story()}</section>],
+  title: 'Todos Controller',
+  component: TodosController,
+  decorators: [
+    (story) => (
+      <section className="todoapp">
+        <Router history={history}>{story()}</Router>
+      </section>
+    ),
+  ],
 } as Meta;
 
-const Template: Story<TodoControllerProps> = (args) => <TodoController {...args} />;
+const Template: Story<TodosControllerProps> = (args) => <TodosController {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

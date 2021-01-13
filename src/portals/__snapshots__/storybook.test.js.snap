@@ -466,392 +466,6 @@ exports[`Storyshots Info Footer Default 1`] = `
 </footer>
 `;
 
-exports[`Storyshots Todo Controller Active Filter 1`] = `
-<section
-  className="todoapp"
->
-  <header
-    className="header"
-  >
-    <h1>
-      todos
-    </h1>
-    <input
-      autoFocus={true}
-      className="new-todo"
-      onKeyDown={[Function]}
-      placeholder="What needs to be done?"
-    />
-  </header>
-  <section
-    className="main"
-  >
-    <input
-      checked={false}
-      className="toggle-all"
-      id="toggle-all"
-      onChange={[Function]}
-      title="Toggle all"
-      type="checkbox"
-    />
-    <label
-      htmlFor="toggle-all"
-    >
-      Mark all as complete
-    </label>
-    <ul
-      className="todo-list"
-    >
-      <li
-        className=""
-      >
-        <div
-          className="view"
-        >
-          <input
-            checked={false}
-            className="toggle"
-            onChange={[Function]}
-            title="Toggle"
-            type="checkbox"
-          />
-          <label
-            onDoubleClick={[Function]}
-          >
-            Buy a unicorn
-          </label>
-          <button
-            className="destroy"
-            onClick={[Function]}
-            title="Destroy"
-          />
-        </div>
-        <input
-          className="edit"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          value="Buy a unicorn"
-        />
-      </li>
-    </ul>
-  </section>
-  <footer
-    className="footer"
-  >
-    <span
-      className="todo-count"
-    >
-      <strong>
-        1
-      </strong>
-       item
-       left
-    </span>
-    <ul
-      className="filters"
-    >
-      <li>
-        <a
-          href="/"
-        >
-          All
-        </a>
-      </li>
-      <li>
-        <a
-          className="selected"
-          href="/active"
-        >
-          Active
-        </a>
-      </li>
-      <li>
-        <a
-          href="/completed"
-        >
-          Completed
-        </a>
-      </li>
-    </ul>
-    <button
-      className="clear-completed"
-      onClick={[Function]}
-    >
-      Clear completed
-    </button>
-  </footer>
-</section>
-`;
-
-exports[`Storyshots Todo Controller Completed Filter 1`] = `
-<section
-  className="todoapp"
->
-  <header
-    className="header"
-  >
-    <h1>
-      todos
-    </h1>
-    <input
-      autoFocus={true}
-      className="new-todo"
-      onKeyDown={[Function]}
-      placeholder="What needs to be done?"
-    />
-  </header>
-  <section
-    className="main"
-  >
-    <input
-      checked={false}
-      className="toggle-all"
-      id="toggle-all"
-      onChange={[Function]}
-      title="Toggle all"
-      type="checkbox"
-    />
-    <label
-      htmlFor="toggle-all"
-    >
-      Mark all as complete
-    </label>
-    <ul
-      className="todo-list"
-    >
-      <li
-        className="completed"
-      >
-        <div
-          className="view"
-        >
-          <input
-            checked={true}
-            className="toggle"
-            onChange={[Function]}
-            title="Toggle"
-            type="checkbox"
-          />
-          <label
-            onDoubleClick={[Function]}
-          >
-            Taste JavaScript
-          </label>
-          <button
-            className="destroy"
-            onClick={[Function]}
-            title="Destroy"
-          />
-        </div>
-        <input
-          className="edit"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          value="Taste JavaScript"
-        />
-      </li>
-    </ul>
-  </section>
-  <footer
-    className="footer"
-  >
-    <span
-      className="todo-count"
-    >
-      <strong>
-        1
-      </strong>
-       item
-       left
-    </span>
-    <ul
-      className="filters"
-    >
-      <li>
-        <a
-          href="/"
-        >
-          All
-        </a>
-      </li>
-      <li>
-        <a
-          href="/active"
-        >
-          Active
-        </a>
-      </li>
-      <li>
-        <a
-          className="selected"
-          href="/completed"
-        >
-          Completed
-        </a>
-      </li>
-    </ul>
-    <button
-      className="clear-completed"
-      onClick={[Function]}
-    >
-      Clear completed
-    </button>
-  </footer>
-</section>
-`;
-
-exports[`Storyshots Todo Controller Default 1`] = `
-<section
-  className="todoapp"
->
-  <header
-    className="header"
-  >
-    <h1>
-      todos
-    </h1>
-    <input
-      autoFocus={true}
-      className="new-todo"
-      onKeyDown={[Function]}
-      placeholder="What needs to be done?"
-    />
-  </header>
-  <section
-    className="main"
-  >
-    <input
-      checked={false}
-      className="toggle-all"
-      id="toggle-all"
-      onChange={[Function]}
-      title="Toggle all"
-      type="checkbox"
-    />
-    <label
-      htmlFor="toggle-all"
-    >
-      Mark all as complete
-    </label>
-    <ul
-      className="todo-list"
-    >
-      <li
-        className="completed"
-      >
-        <div
-          className="view"
-        >
-          <input
-            checked={true}
-            className="toggle"
-            onChange={[Function]}
-            title="Toggle"
-            type="checkbox"
-          />
-          <label
-            onDoubleClick={[Function]}
-          >
-            Taste JavaScript
-          </label>
-          <button
-            className="destroy"
-            onClick={[Function]}
-            title="Destroy"
-          />
-        </div>
-        <input
-          className="edit"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          value="Taste JavaScript"
-        />
-      </li>
-      <li
-        className=""
-      >
-        <div
-          className="view"
-        >
-          <input
-            checked={false}
-            className="toggle"
-            onChange={[Function]}
-            title="Toggle"
-            type="checkbox"
-          />
-          <label
-            onDoubleClick={[Function]}
-          >
-            Buy a unicorn
-          </label>
-          <button
-            className="destroy"
-            onClick={[Function]}
-            title="Destroy"
-          />
-        </div>
-        <input
-          className="edit"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          value="Buy a unicorn"
-        />
-      </li>
-    </ul>
-  </section>
-  <footer
-    className="footer"
-  >
-    <span
-      className="todo-count"
-    >
-      <strong>
-        1
-      </strong>
-       item
-       left
-    </span>
-    <ul
-      className="filters"
-    >
-      <li>
-        <a
-          className="selected"
-          href="/"
-        >
-          All
-        </a>
-      </li>
-      <li>
-        <a
-          href="/active"
-        >
-          Active
-        </a>
-      </li>
-      <li>
-        <a
-          href="/completed"
-        >
-          Completed
-        </a>
-      </li>
-    </ul>
-    <button
-      className="clear-completed"
-      onClick={[Function]}
-    >
-      Clear completed
-    </button>
-  </footer>
-</section>
-`;
-
 exports[`Storyshots Todo Item Completed 1`] = `
 <section
   className="todoapp"
@@ -1187,6 +801,7 @@ exports[`Storyshots Todo List Footer 0 Items left 1`] = `
         <a
           className="selected"
           href="/"
+          onClick={[Function]}
         >
           All
         </a>
@@ -1194,6 +809,7 @@ exports[`Storyshots Todo List Footer 0 Items left 1`] = `
       <li>
         <a
           href="/active"
+          onClick={[Function]}
         >
           Active
         </a>
@@ -1201,6 +817,7 @@ exports[`Storyshots Todo List Footer 0 Items left 1`] = `
       <li>
         <a
           href="/completed"
+          onClick={[Function]}
         >
           Completed
         </a>
@@ -1238,6 +855,7 @@ exports[`Storyshots Todo List Footer 1 Item left 1`] = `
         <a
           className="selected"
           href="/"
+          onClick={[Function]}
         >
           All
         </a>
@@ -1245,6 +863,7 @@ exports[`Storyshots Todo List Footer 1 Item left 1`] = `
       <li>
         <a
           href="/active"
+          onClick={[Function]}
         >
           Active
         </a>
@@ -1252,6 +871,7 @@ exports[`Storyshots Todo List Footer 1 Item left 1`] = `
       <li>
         <a
           href="/completed"
+          onClick={[Function]}
         >
           Completed
         </a>
@@ -1285,6 +905,7 @@ exports[`Storyshots Todo List Footer Has completed Items 1`] = `
         <a
           className="selected"
           href="/"
+          onClick={[Function]}
         >
           All
         </a>
@@ -1292,6 +913,7 @@ exports[`Storyshots Todo List Footer Has completed Items 1`] = `
       <li>
         <a
           href="/active"
+          onClick={[Function]}
         >
           Active
         </a>
@@ -1299,6 +921,7 @@ exports[`Storyshots Todo List Footer Has completed Items 1`] = `
       <li>
         <a
           href="/completed"
+          onClick={[Function]}
         >
           Completed
         </a>
@@ -1343,6 +966,7 @@ exports[`Storyshots Todo List Footer Multiple Items left 1`] = `
         <a
           className="selected"
           href="/"
+          onClick={[Function]}
         >
           All
         </a>
@@ -1350,6 +974,7 @@ exports[`Storyshots Todo List Footer Multiple Items left 1`] = `
       <li>
         <a
           href="/active"
+          onClick={[Function]}
         >
           Active
         </a>
@@ -1357,6 +982,7 @@ exports[`Storyshots Todo List Footer Multiple Items left 1`] = `
       <li>
         <a
           href="/completed"
+          onClick={[Function]}
         >
           Completed
         </a>
@@ -1388,6 +1014,7 @@ exports[`Storyshots Todo List Footer Show active Items 1`] = `
       <li>
         <a
           href="/"
+          onClick={[Function]}
         >
           All
         </a>
@@ -1396,6 +1023,7 @@ exports[`Storyshots Todo List Footer Show active Items 1`] = `
         <a
           className="selected"
           href="/active"
+          onClick={[Function]}
         >
           Active
         </a>
@@ -1403,6 +1031,7 @@ exports[`Storyshots Todo List Footer Show active Items 1`] = `
       <li>
         <a
           href="/completed"
+          onClick={[Function]}
         >
           Completed
         </a>
@@ -1434,6 +1063,7 @@ exports[`Storyshots Todo List Footer Show completed Items 1`] = `
       <li>
         <a
           href="/"
+          onClick={[Function]}
         >
           All
         </a>
@@ -1441,6 +1071,7 @@ exports[`Storyshots Todo List Footer Show completed Items 1`] = `
       <li>
         <a
           href="/active"
+          onClick={[Function]}
         >
           Active
         </a>
@@ -1449,6 +1080,7 @@ exports[`Storyshots Todo List Footer Show completed Items 1`] = `
         <a
           className="selected"
           href="/completed"
+          onClick={[Function]}
         >
           Completed
         </a>
@@ -1475,5 +1107,400 @@ exports[`Storyshots Todo List Header Default 1`] = `
       placeholder="What needs to be done?"
     />
   </header>
+</section>
+`;
+
+exports[`Storyshots Todos Controller Active Filter 1`] = `
+<section
+  className="todoapp"
+>
+  <header
+    className="header"
+  >
+    <h1>
+      todos
+    </h1>
+    <input
+      autoFocus={true}
+      className="new-todo"
+      onKeyDown={[Function]}
+      placeholder="What needs to be done?"
+    />
+  </header>
+  <section
+    className="main"
+  >
+    <input
+      checked={false}
+      className="toggle-all"
+      id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
+      type="checkbox"
+    />
+    <label
+      htmlFor="toggle-all"
+    >
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list"
+    >
+      <li
+        className=""
+      >
+        <div
+          className="view"
+        >
+          <input
+            checked={false}
+            className="toggle"
+            onChange={[Function]}
+            title="Toggle"
+            type="checkbox"
+          />
+          <label
+            onDoubleClick={[Function]}
+          >
+            Buy a unicorn
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]}
+            title="Destroy"
+          />
+        </div>
+        <input
+          className="edit"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value="Buy a unicorn"
+        />
+      </li>
+    </ul>
+  </section>
+  <footer
+    className="footer"
+  >
+    <span
+      className="todo-count"
+    >
+      <strong>
+        1
+      </strong>
+       item
+       left
+    </span>
+    <ul
+      className="filters"
+    >
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          All
+        </a>
+      </li>
+      <li>
+        <a
+          className="selected"
+          href="/active"
+          onClick={[Function]}
+        >
+          Active
+        </a>
+      </li>
+      <li>
+        <a
+          href="/completed"
+          onClick={[Function]}
+        >
+          Completed
+        </a>
+      </li>
+    </ul>
+    <button
+      className="clear-completed"
+      onClick={[Function]}
+    >
+      Clear completed
+    </button>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Todos Controller Completed Filter 1`] = `
+<section
+  className="todoapp"
+>
+  <header
+    className="header"
+  >
+    <h1>
+      todos
+    </h1>
+    <input
+      autoFocus={true}
+      className="new-todo"
+      onKeyDown={[Function]}
+      placeholder="What needs to be done?"
+    />
+  </header>
+  <section
+    className="main"
+  >
+    <input
+      checked={false}
+      className="toggle-all"
+      id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
+      type="checkbox"
+    />
+    <label
+      htmlFor="toggle-all"
+    >
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list"
+    >
+      <li
+        className="completed"
+      >
+        <div
+          className="view"
+        >
+          <input
+            checked={true}
+            className="toggle"
+            onChange={[Function]}
+            title="Toggle"
+            type="checkbox"
+          />
+          <label
+            onDoubleClick={[Function]}
+          >
+            Taste JavaScript
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]}
+            title="Destroy"
+          />
+        </div>
+        <input
+          className="edit"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value="Taste JavaScript"
+        />
+      </li>
+    </ul>
+  </section>
+  <footer
+    className="footer"
+  >
+    <span
+      className="todo-count"
+    >
+      <strong>
+        1
+      </strong>
+       item
+       left
+    </span>
+    <ul
+      className="filters"
+    >
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          All
+        </a>
+      </li>
+      <li>
+        <a
+          href="/active"
+          onClick={[Function]}
+        >
+          Active
+        </a>
+      </li>
+      <li>
+        <a
+          className="selected"
+          href="/completed"
+          onClick={[Function]}
+        >
+          Completed
+        </a>
+      </li>
+    </ul>
+    <button
+      className="clear-completed"
+      onClick={[Function]}
+    >
+      Clear completed
+    </button>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Todos Controller Default 1`] = `
+<section
+  className="todoapp"
+>
+  <header
+    className="header"
+  >
+    <h1>
+      todos
+    </h1>
+    <input
+      autoFocus={true}
+      className="new-todo"
+      onKeyDown={[Function]}
+      placeholder="What needs to be done?"
+    />
+  </header>
+  <section
+    className="main"
+  >
+    <input
+      checked={false}
+      className="toggle-all"
+      id="toggle-all"
+      onChange={[Function]}
+      title="Toggle all"
+      type="checkbox"
+    />
+    <label
+      htmlFor="toggle-all"
+    >
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list"
+    >
+      <li
+        className="completed"
+      >
+        <div
+          className="view"
+        >
+          <input
+            checked={true}
+            className="toggle"
+            onChange={[Function]}
+            title="Toggle"
+            type="checkbox"
+          />
+          <label
+            onDoubleClick={[Function]}
+          >
+            Taste JavaScript
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]}
+            title="Destroy"
+          />
+        </div>
+        <input
+          className="edit"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value="Taste JavaScript"
+        />
+      </li>
+      <li
+        className=""
+      >
+        <div
+          className="view"
+        >
+          <input
+            checked={false}
+            className="toggle"
+            onChange={[Function]}
+            title="Toggle"
+            type="checkbox"
+          />
+          <label
+            onDoubleClick={[Function]}
+          >
+            Buy a unicorn
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]}
+            title="Destroy"
+          />
+        </div>
+        <input
+          className="edit"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value="Buy a unicorn"
+        />
+      </li>
+    </ul>
+  </section>
+  <footer
+    className="footer"
+  >
+    <span
+      className="todo-count"
+    >
+      <strong>
+        1
+      </strong>
+       item
+       left
+    </span>
+    <ul
+      className="filters"
+    >
+      <li>
+        <a
+          className="selected"
+          href="/"
+          onClick={[Function]}
+        >
+          All
+        </a>
+      </li>
+      <li>
+        <a
+          href="/active"
+          onClick={[Function]}
+        >
+          Active
+        </a>
+      </li>
+      <li>
+        <a
+          href="/completed"
+          onClick={[Function]}
+        >
+          Completed
+        </a>
+      </li>
+    </ul>
+    <button
+      className="clear-completed"
+      onClick={[Function]}
+    >
+      Clear completed
+    </button>
+  </footer>
 </section>
 `;

@@ -1,13 +1,23 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
 import { Meta, Story } from '@storybook/react';
 
 import TodoListFooter, { TodoListFooterProps } from './TodoListFooter';
 import { TodoFilter } from './types';
 
+const history = createMemoryHistory();
+
 export default {
   title: 'Todo List Footer',
   component: TodoListFooter,
-  decorators: [(story) => <section className="todoapp">{story()}</section>],
+  decorators: [
+    (story) => (
+      <section className="todoapp">
+        <Router history={history}>{story()}</Router>
+      </section>
+    ),
+  ],
   argTypes: {
     filter: {
       control: {

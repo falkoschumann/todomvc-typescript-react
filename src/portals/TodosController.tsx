@@ -16,7 +16,7 @@ import TodoList from './TodoList';
 import TodoItem from './TodoItem';
 import TodoListFooter from './TodoListFooter';
 
-export type TodoControllerProps = Readonly<{
+export type TodosControllerProps = Readonly<{
   filter?: TodoFilter;
   todosQueryResult?: TodosQueryResult;
   onToggleAllCommand?: (command: ToggleAllCommand) => void;
@@ -27,7 +27,7 @@ export type TodoControllerProps = Readonly<{
   onClearCompletedCommand?: (command: ClearCompletedCommand) => void;
 }>;
 
-function TodoController({
+function TodosController({
   filter = TodoFilter.All,
   todosQueryResult = { todos: [] },
   onToggleAllCommand,
@@ -36,7 +36,7 @@ function TodoController({
   onEditCommand,
   onDestroyCommand,
   onClearCompletedCommand,
-}: TodoControllerProps) {
+}: TodosControllerProps) {
   const [editing, setEditing] = useState<TodoId>();
 
   const todos = todosQueryResult.todos;
@@ -116,4 +116,4 @@ function TodoController({
   );
 }
 
-export default TodoController;
+export default TodosController;

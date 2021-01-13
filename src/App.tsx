@@ -2,19 +2,21 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import TodosPage from './portals/TodosPage';
-import './App.css';
 import InfoFooter from './portals/InfoFooter';
-import TodosProvider from './portals/TodosProvider';
+import MessageHandling from './providers/MessageHandling';
+import './App.css';
+
+const messageHandling = MessageHandling;
 
 function App() {
   return (
     <React.StrictMode>
       <section className="todoapp">
-        <TodosProvider>
-          <Switch>
-            <Route path="/" component={TodosPage} />
-          </Switch>
-        </TodosProvider>
+        <Switch>
+          <Route path="/">
+            <TodosPage messageHandling={messageHandling} />
+          </Route>
+        </Switch>
       </section>
       <InfoFooter />
     </React.StrictMode>

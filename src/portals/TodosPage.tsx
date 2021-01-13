@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { MessageHandling } from '../domain/MessageHandling';
 import { TodoFilter } from './types';
 import TodosController from './TodosController';
-import { useTodos } from './TodosProvider';
+import { TodosQueryResult } from '../domain/messages/queries';
 
 export type TodosPageProps = Readonly<{
-  filter?: TodoFilter;
+  messageHandling: MessageHandling;
 }>;
 
-function TodosPage({ filter }: TodosPageProps) {
+function TodosPage({ messageHandling }: TodosPageProps) {
   const location = useLocation();
-
+  let filter: TodoFilter;
   switch (location.pathname) {
     case '/active':
       filter = TodoFilter.Active;
@@ -24,18 +25,71 @@ function TodosPage({ filter }: TodosPageProps) {
       break;
   }
 
-  const todos = useTodos();
+  const [todosQueryResult, setTodosQueryResult] = useState<TodosQueryResult>();
+  const handleToggleAllCommand = useCallback(
+    (command) => {
+      messageHandling.handleToggleAllCommand(command);
+      const result = messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    },
+    [messageHandling]
+  );
+  const handleNewTodoCommand = useCallback(
+    (command) => {
+      messageHandling.handleNewTodoCommand(command);
+      const result = messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    },
+    [messageHandling]
+  );
+  const handleToggleCommand = useCallback(
+    (command) => {
+      messageHandling.handleToggleCommand(command);
+      const result = messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    },
+    [messageHandling]
+  );
+  const handleEditCommand = useCallback(
+    (command) => {
+      messageHandling.handleEditCommand(command);
+      const result = messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    },
+    [messageHandling]
+  );
+  const handleDestroyCommand = useCallback(
+    (command) => {
+      messageHandling.handleDestroyCommand(command);
+      const result = messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    },
+    [messageHandling]
+  );
+  const handleClearCompletedCommand = useCallback(
+    (command) => {
+      messageHandling.handleClearCompletedCommand(command);
+      const result = messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    },
+    [messageHandling]
+  );
+
+  useEffect(() => {
+    const result = messageHandling.handleTodosQuery({});
+    setTodosQueryResult(result);
+  }, [messageHandling]);
 
   return (
     <TodosController
       filter={filter}
-      todosQueryResult={todos.todosQueryResult}
-      onToggleAllCommand={(command) => todos.handleToggleAllCommand(command)}
-      onNewTodoCommand={(command) => todos.handleNewTodoCommand(command)}
-      onToggleCommand={(command) => todos.handleToggleCommand(command)}
-      onEditCommand={(command) => todos.handleEditCommand(command)}
-      onDestroyCommand={(command) => todos.handleDestroyCommand(command)}
-      onClearCompletedCommand={(command) => todos.handleClearCompletedCommand(command)}
+      todosQueryResult={todosQueryResult}
+      onToggleAllCommand={handleToggleAllCommand}
+      onNewTodoCommand={handleNewTodoCommand}
+      onToggleCommand={handleToggleCommand}
+      onEditCommand={handleEditCommand}
+      onDestroyCommand={handleDestroyCommand}
+      onClearCompletedCommand={handleClearCompletedCommand}
     />
   );
 }

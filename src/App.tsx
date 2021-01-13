@@ -3,10 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 
 import TodosPage from './portals/TodosPage';
 import InfoFooter from './portals/InfoFooter';
-import MessageHandling from './providers/MessageHandling';
+//import { BackendProxy } from './portals/BackendProxy';
+import { TodoRepository } from './providers/types';
+import { MessageHandling } from './providers/MessageHandling';
+import { LocalStorageTodoRepository } from './providers/adapters/LocalStorageTodoRepository';
 import './App.css';
 
-const messageHandling = MessageHandling;
+const repository: TodoRepository = new LocalStorageTodoRepository();
+const messageHandling = new MessageHandling(repository);
+//const messageHandling = new BackendProxy();
 
 function App() {
   return (

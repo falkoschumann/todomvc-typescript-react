@@ -27,57 +27,59 @@ function TodosPage({ messageHandling }: TodosPageProps) {
 
   const [todosQueryResult, setTodosQueryResult] = useState<TodosQueryResult>();
   const handleToggleAllCommand = useCallback(
-    (command) => {
-      messageHandling.handleToggleAllCommand(command);
-      const result = messageHandling.handleTodosQuery({});
+    async (command) => {
+      await messageHandling.handleToggleAllCommand(command);
+      const result = await messageHandling.handleTodosQuery({});
       setTodosQueryResult(result);
     },
     [messageHandling]
   );
   const handleNewTodoCommand = useCallback(
-    (command) => {
-      messageHandling.handleNewTodoCommand(command);
-      const result = messageHandling.handleTodosQuery({});
+    async (command) => {
+      await messageHandling.handleNewTodoCommand(command);
+      const result = await messageHandling.handleTodosQuery({});
       setTodosQueryResult(result);
     },
     [messageHandling]
   );
   const handleToggleCommand = useCallback(
-    (command) => {
-      messageHandling.handleToggleCommand(command);
-      const result = messageHandling.handleTodosQuery({});
+    async (command) => {
+      await messageHandling.handleToggleCommand(command);
+      const result = await messageHandling.handleTodosQuery({});
       setTodosQueryResult(result);
     },
     [messageHandling]
   );
   const handleEditCommand = useCallback(
-    (command) => {
-      messageHandling.handleEditCommand(command);
-      const result = messageHandling.handleTodosQuery({});
+    async (command) => {
+      await messageHandling.handleEditCommand(command);
+      const result = await messageHandling.handleTodosQuery({});
       setTodosQueryResult(result);
     },
     [messageHandling]
   );
   const handleDestroyCommand = useCallback(
-    (command) => {
-      messageHandling.handleDestroyCommand(command);
-      const result = messageHandling.handleTodosQuery({});
+    async (command) => {
+      await messageHandling.handleDestroyCommand(command);
+      const result = await messageHandling.handleTodosQuery({});
       setTodosQueryResult(result);
     },
     [messageHandling]
   );
   const handleClearCompletedCommand = useCallback(
-    (command) => {
-      messageHandling.handleClearCompletedCommand(command);
-      const result = messageHandling.handleTodosQuery({});
+    async (command) => {
+      await messageHandling.handleClearCompletedCommand(command);
+      const result = await messageHandling.handleTodosQuery({});
       setTodosQueryResult(result);
     },
     [messageHandling]
   );
 
   useEffect(() => {
-    const result = messageHandling.handleTodosQuery({});
-    setTodosQueryResult(result);
+    (async () => {
+      const result = await messageHandling.handleTodosQuery({});
+      setTodosQueryResult(result);
+    })();
   }, [messageHandling]);
 
   return (

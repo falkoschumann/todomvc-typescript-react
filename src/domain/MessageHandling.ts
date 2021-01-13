@@ -10,11 +10,11 @@ import {
 import { TodosQuery, TodosQueryResult } from './messages/queries';
 
 export interface MessageHandling {
-  handleClearCompletedCommand(command: ClearCompletedCommand): CommandStatus;
-  handleDestroyCommand(command: DestroyCommand): CommandStatus;
-  handleEditCommand(command: EditCommand): CommandStatus;
-  handleNewTodoCommand(command: NewTodoCommand): CommandStatus;
-  handleToggleAllCommand(command: ToggleAllCommand): CommandStatus;
-  handleToggleCommand(command: ToggleCommand): CommandStatus;
-  handleTodosQuery(query: TodosQuery): TodosQueryResult;
+  handleClearCompletedCommand(command: ClearCompletedCommand): Promise<CommandStatus>;
+  handleDestroyCommand(command: DestroyCommand): Promise<CommandStatus>;
+  handleEditCommand(command: EditCommand): Promise<CommandStatus>;
+  handleNewTodoCommand(command: NewTodoCommand): Promise<CommandStatus>;
+  handleToggleAllCommand(command: ToggleAllCommand): Promise<CommandStatus>;
+  handleToggleCommand(command: ToggleCommand): Promise<CommandStatus>;
+  handleTodosQuery(query: TodosQuery): Promise<TodosQueryResult>;
 }

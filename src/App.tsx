@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import TodosPage from './portals/TodosPage';
 import InfoFooter from './portals/InfoFooter';
-//import { BackendProxy } from './portals/BackendProxy';
+//import { BackendProxy } from './providers/BackendProxy';
 import { TodoRepository } from './providers/types';
 import { MessageHandling } from './providers/MessageHandling';
 import { LocalStorageTodoRepository } from './providers/adapters/LocalStorageTodoRepository';
